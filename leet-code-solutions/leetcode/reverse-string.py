@@ -1,11 +1,14 @@
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        i = 0
-        j = len(s)-1
-        while i<j:
-            s[i] ,s[j] = s[j] , s[i]
-            i+=1
-            j-=1
+        def recursive(arr, idx):
+            if idx == len(s)//2:
+                arr[idx] = arr[idx]
+            else:
+                arr[idx] , arr[len(s)-idx-1] = arr[len(s)-idx-1] , arr[idx]
+
+                recursive(arr,idx+1)
+        return recursive(s, 0)
+       
 
 
          
