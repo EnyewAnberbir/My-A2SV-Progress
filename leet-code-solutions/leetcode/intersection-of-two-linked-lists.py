@@ -16,7 +16,7 @@ class Solution:
             if curr2 in visited:
                 return curr2
             curr2 = curr2.next
-        return
+     
 
 
 
