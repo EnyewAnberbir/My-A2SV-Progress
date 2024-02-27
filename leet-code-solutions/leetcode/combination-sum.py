@@ -7,7 +7,6 @@ class Solution:
                 return
             if i >= len(candidates) or total > target:
                 return
- 
             curr.append(candidates[i])
             backtracking(i , curr, total+candidates[i])
             curr.pop()
